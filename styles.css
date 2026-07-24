@@ -123,20 +123,20 @@ img{max-width:100%;display:block;}
 
 .hero-photo-wrap{
   position:relative;
-  width:148px;
-  height:148px;
+  width:220px;
+  height:220px;
   margin:0 auto 28px;
 }
 .hero-photo{
-  width:148px;
-  height:148px;
+  width:220px;
+  height:220px;
   border-radius:50%;
   object-fit:cover;
   border:3px solid var(--navy-700);
 }
 .hero-photo-ring{
   position:absolute;
-  inset:-8px;
+  inset:-10px;
   border-radius:50%;
   border:1px dashed var(--amber-500);
   opacity:0.6;
@@ -239,13 +239,57 @@ section{
 }
 
 /* ============================================
-   ABOUT
+   EXPERIENCE
 ============================================ */
-.about-text{
-  color:var(--ink-300);
-  max-width:760px;
-  font-size:1.02rem;
+.experience .job:first-of-type{
+  border-top:none;
+  padding-top:16px;
 }
+.job{
+  border-top:1px solid var(--navy-700);
+  padding:28px 0;
+}
+.job:last-child{padding-bottom:0;}
+
+.job-header{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:6px 20px;
+  margin-bottom:14px;
+}
+
+.job-title{
+  font-family:var(--font-head);
+  font-size:1.15rem;
+  font-weight:600;
+  margin:0 0 2px;
+  color:var(--ink-100);
+}
+
+.job-company{
+  margin:0;
+  color:var(--amber-300);
+  font-size:0.92rem;
+}
+
+.job-dates{
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  color:var(--ink-500);
+  margin:0;
+  white-space:nowrap;
+}
+
+.job-list{
+  margin:0;
+  padding-left:1.2em;
+  color:var(--ink-300);
+  font-size:0.95rem;
+}
+.job-list li{margin-bottom:8px;}
+.job-list li:last-child{margin-bottom:0;}
 
 /* ============================================
    PROJECTS
@@ -254,6 +298,7 @@ section{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:20px;
+  margin-top:24px;
 }
 
 .project-card{
@@ -312,7 +357,7 @@ section{
   color:var(--ink-500);
   font-size:0.9rem;
   max-width:560px;
-  margin:-16px 0 28px;
+  margin:0 0 28px;
 }
 
 .cred-grid{
@@ -381,6 +426,9 @@ section{
    RESPONSIVE
 ============================================ */
 @media (max-width:720px){
+  .hero-photo-wrap{width:160px; height:160px;}
+  .hero-photo{width:160px; height:160px;}
+
   .site-nav{
     position:absolute;
     top:100%;
